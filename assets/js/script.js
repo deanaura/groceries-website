@@ -81,3 +81,168 @@ for (item of listItems) {
         }
     }
 }
+
+// dropdown for browse-list
+let dropdownBtnBrowse = document.getElementById("drop-text-browse");
+let spanBrowse = document.getElementById("span-browse");
+let iconBrowse = document.getElementById("icon-browse");
+let browseList = document.getElementById("browse-list");
+let browseListItems = document.querySelectorAll(".browse-list-item");
+
+dropdownBtnBrowse.onclick = function () {
+    if (browseList.classList.contains("show")) {
+        iconBrowse.style.rotate = "0deg";
+    } else {
+        iconBrowse.style.rotate = "-180deg";
+    }
+    browseList.classList.toggle("show");
+}
+
+window.onclick = function (e) {
+    if (
+        e.target.id !== "drop-text-browse" &&
+        e.target.id !== "span-browse" &&
+        e.target.id !== "icon-browse"
+    ) {
+        browseList.classList.remove("show");
+        iconBrowse.style.rotate = "0deg";
+    }
+}
+
+for (itemBrowse of browseListItems) {
+    itemBrowse.onclick = function (e) {
+        spanBrowse.innerText = e.target.innerText;
+    }
+}
+
+// dropdown for shop-list
+let dropdownBtnShop = document.getElementById("drop-text-shop");
+let spanShop = document.getElementById("span-shop");
+let iconShop = document.getElementById("icon-shop");
+let shopList = document.getElementById("shop-list");
+let shopListItems = document.querySelectorAll(".shop-list-item");
+
+dropdownBtnShop.onclick = function () {
+    if (shopList.classList.contains("show")) {
+        iconShop.style.rotate = "0deg";
+    } else {
+        iconShop.style.rotate = "-180deg";
+    }
+    shopList.classList.toggle("show");
+}
+
+window.onclick = function (e) {
+    if (
+        e.target.id !== "drop-text-shop" &&
+        e.target.id !== "span-shop" &&
+        e.target.id !== "icon-shop"
+    ) {
+        shopList.classList.remove("show");
+        iconshop.style.rotate = "0deg";
+    }
+}
+
+for (itemShop of shopListItems) {
+    itemShop.onclick = function (e) {
+        spanShop.innerText = e.target.innerText;
+    }
+}
+
+// dropdown for stores-list
+let dropdownBtnStores = document.getElementById("drop-text-stores");
+let spanStores = document.getElementById("span-stores");
+let iconStores = document.getElementById("icon-stores");
+let storesList = document.getElementById("stores-list");
+let storesListItems = document.querySelectorAll(".stores-list-item");
+
+dropdownBtnStores.onclick = function () {
+    if (storesList.classList.contains("show")) {
+        iconStores.style.rotate = "0deg";
+    } else {
+        iconStores.style.rotate = "-180deg";
+    }
+    storesList.classList.toggle("show");
+}
+
+window.onclick = function (e) {
+    if (
+        e.target.id !== "drop-text-stores" &&
+        e.target.id !== "span-stores" &&
+        e.target.id !== "icon-stores"
+    ) {
+        storesList.classList.remove("show");
+        iconstores.style.rotate = "0deg";
+    }
+}
+
+for (itemStores of storesListItems) {
+    itemStores.onclick = function (e) {
+        spanStores.innerText = e.target.innerText;
+    }
+}
+
+// dropdown for prod-list
+let dropdownBtnProd = document.getElementById("drop-text-prod");
+let spanProd = document.getElementById("span-prod");
+let iconProd = document.getElementById("icon-prod");
+let prodList = document.getElementById("prod-list");
+let prodListItems = document.querySelectorAll(".prod-list-item");
+
+dropdownBtnProd.onclick = function () {
+    if (prodList.classList.contains("show")) {
+        iconProd.style.rotate = "0deg";
+    } else {
+        iconProd.style.rotate = "-180deg";
+    }
+    prodList.classList.toggle("show");
+}
+
+window.onclick = function (e) {
+    if (
+        e.target.id !== "drop-text-prod" &&
+        e.target.id !== "span-prod" &&
+        e.target.id !== "icon-prod"
+    ) {
+        prodList.classList.remove("show");
+        iconProd.style.rotate = "0deg";
+    }
+}
+
+for (itemprod of prodListItems) {
+    itemprod.onclick = function (e) {
+        spanprod.innerText = e.target.innerText;
+    }
+}
+
+// dropdown for blog-list
+let dropdownBtnBlog = document.getElementById("drop-text-blog");
+let spanBlog = document.getElementById("span-blog");
+let iconBlog = document.getElementById("icon-blog");
+let blogList = document.getElementById("blog-list");
+let blogListItems = document.querySelectorAll(".blog-list-item");
+
+dropdownBtnBlog.onclick = function () {
+    if (blogList.classList.contains("show")) {
+        iconBlog.style.rotate = "0deg";
+    } else {
+        iconBlog.style.rotate = "-180deg";
+    }
+    blogList.classList.toggle("show");
+}
+
+window.onclick = function (e) {
+    if (
+        e.target.id !== "drop-text-blog" &&
+        e.target.id !== "span-blog" &&
+        e.target.id !== "icon-blog"
+    ) {
+        blogList.classList.remove("show");
+        iconBlog.style.rotate = "0deg";
+    }
+}
+
+for (itemblog of blogListItems) {
+    itemblog.onclick = function (e) {
+        spanblog.innerText = e.target.innerText;
+    }
+}
