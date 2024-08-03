@@ -243,6 +243,65 @@ window.onclick = function (e) {
 
 for (itemblog of blogListItems) {
     itemblog.onclick = function (e) {
-        spanblog.innerText = e.target.innerText;
+        spanBlog.innerText = e.target.innerText;
     }
 }
+
+// hero swiper
+document.addEventListener('DOMContentLoaded', function() {
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var topCatSwiper = new Swiper('.top-cat-list', {
+        loop: true,
+        slidesPerView: 10,
+        navigation: {
+            nextEl: '.btn-next',
+            prevEl: '.btn-prev',
+        },
+    });
+});
+
+// top-categories arrow
+document.addEventListener('DOMContentLoaded', () => {
+    const btnPrev = document.querySelector('.btn-prev');
+    const btnNext = document.querySelector('.btn-next');
+    const topCatList = document.querySelector('.top-cat-list');
+    let currentIndex = 0;
+    const itemsPerView = 10;
+  
+    function updateSlider() {
+      const totalItems = topCatList.children.length;
+      const maxIndex = totalItems - itemsPerView;
+  
+      if (currentIndex > maxIndex) {
+        currentIndex = 0;
+      } else if (currentIndex < 0) {
+        currentIndex = maxIndex;
+      }
+  
+      const offset = currentIndex * -100 / itemsPerView;
+      topCatList.style.transform = `translateX(${offset}%)`;
+      console.log('Current Index:', currentIndex, 'Offset:', offset);
+    }
+  
+    btnPrev.addEventListener('click', () => {
+      currentIndex--;
+      updateSlider();
+    });
+  
+    btnNext.addEventListener('click', () => {
+      currentIndex++;
+      updateSlider();
+    });
+  
+    // Initialize the slider
+    updateSlider();
+  });
+  

@@ -11,12 +11,15 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
       rel="stylesheet"
     />
+    <!-- swiper js -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   </head>
   <body>
     <!-- nav about us start -->
@@ -221,25 +224,127 @@
     </div>
     <!-- navbar product end -->
 
-    <!-- hero section -->
+    <!-- hero Section -->
     <section class="hero-section">
       <div class="hero-container">
-        <div class="hero-text">
-          <h1 class="title">
-            Fresh Vegetables <br />
-            Big Discount
-          </h1>
-          <p>Save up to 50% off on your first order</p>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url('assets/img/hero-bg.png');" aria-label="Fresh Vegetables Big Discount">
+              <div class="hero-text">
+                <h1 class="title">Fresh Vegetables <br /> Big Discount</h1>
+                <p>Save up to 50% off on your first order</p>
+              </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url('assets/img/hero-bg.png');" aria-label="Fresh Fruits Great Prices">
+              <div class="hero-text">
+                <h1 class="title">Fresh Fruits <br /> Great Prices</h1>
+                <p>Get the best deals on fresh fruits</p>
+              </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url('assets/img/hero-bg.png');" aria-label="Organic Products High Quality">
+              <div class="hero-text">
+                <h1 class="title">Organic Products <br /> High Quality</h1>
+                <p>Experience the best organic products</p>
+              </div>
+            </div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
         </div>
-        <form class="hero-search">
-          <i class="ri-send-plane-2-line"></i>
-          <input type="text" class="search-input" placeholder="Search" />
-          <a href="#" class="search-btn">Search</a>
-        </form>
       </div>
     </section>
-    <!-- hero section end -->
+    <!-- hero Section End -->
 
+    <!-- top cat start -->
+<section class="top-cat-section">
+  <div class="top-cat-header">
+    <h3 class="title">Top Categories</h3>
+    <!-- untuk swiper panah -->
+    <div class="btn-top-cat">
+      <button class="btn-prev">
+        <i class="ri-arrow-left-line"></i>
+      </button>
+      <button class="btn-next">
+        <i class="ri-arrow-right-line"></i>
+      </button>
+    </div>
+  </div>
+  <div class="top-cat-list-wrapper">
+    <div class="top-cat-list">
+      <div class="top-cat-item" style="background-color: #F2FCE4;">
+        <img src="assets/img/image-1.png.png" alt="" class="top-cat-prod">
+        <h5 class="name">Milks & Dairy</h5>
+        <p class="sum-item">3 items</p>
+      </div>
+      <div class="top-cat-item" style="background-color: #FFFCEB;">
+        <img src="assets/img/image-2.png.png" alt="" class="top-cat-prod">
+        <h5 class="name">Juice</h5>
+        <p class="sum-item">8 items</p>
+      </div>
+      <div class="top-cat-item" style="background-color: #ECFFEC;">
+        <img src="assets/img/image-3.png.png" alt="" class="top-cat-prod">
+        <h5 class="name">Pet Toy</h5>
+        <p class="sum-item">11 items</p>
+      </div>
+      <div class="top-cat-item" style="background-color: #FEEFEA;">
+        <img src="assets/img/image-4.png.png" alt="" class="top-cat-prod">
+        <h5 class="name">Baking</h5>
+        <p class="sum-item">6 items</p>
+      </div>
+      <div class="top-cat-item" style="background-color: #FFF3EB;">
+        <img src="assets/img/image-5.png.png" alt="" class="top-cat-prod">
+        <h5 class="name">Fresh Fruit</h5>
+        <p class="sum-item">8 items</p>
+      </div>
+      <div class="top-cat-item" style="background-color: #FFF3FF;">
+        <img src="assets/img/image-6.png.png" alt="" class="top-cat-prod">
+        <h5 class="name">Wines & Drinks</h5>
+        <p class="sum-item">8 items</p>
+      </div>
+      <div class="top-cat-item" style="background-color: #F2FCE4;">
+        <img src="assets/img/image-7.png.png" alt="" class="top-cat-prod">
+        <h5 class="name">Fresh Seafood</h5>
+        <p class="sum-item">9 items</p>
+      </div>
+      <div class="top-cat-item" style="background-color: #FFFCEB;">
+        <img src="assets/img/image-8.png.png" alt="" class="top-cat-prod">
+        <h5 class="name">Fast Food</h5>
+        <p class="sum-item">5 items</p>
+      </div>
+      <div class="top-cat-item" style="background-color: #ECFFEC;">
+        <img src="assets/img/image-9.png.png" alt="" class="top-cat-prod">
+        <h5 class="name">Vegetables</h5>
+        <p class="sum-item">7 items</p>
+      </div>
+      <div class="top-cat-item" style="background-color: #FEEFEA;">
+        <img src="assets/img/image-10.png.png" alt="" class="top-cat-prod">
+        <h5 class="name">Bread</h5>
+        <p class="sum-item">6 items</p>
+      </div>
+      <div class="top-cat-item" style="background-color: #FFF3EB;">
+        <img src="assets/img/image-5.png.png" alt="" class="top-cat-prod">
+        <h5 class="name">Fresh Fruit</h5>
+        <p class="sum-item">8 items</p>
+      </div>
+      <div class="top-cat-item" style="background-color: #FFF3FF;">
+        <img src="assets/img/image-6.png.png" alt="" class="top-cat-prod">
+        <h5 class="name">Wines & Drinks</h5>
+        <p class="sum-item">8 items</p>
+      </div>
+      <div class="top-cat-item" style="background-color: #F2FCE4;">
+        <img src="assets/img/image-7.png.png" alt="" class="top-cat-prod">
+        <h5 class="name">Fresh Seafood</h5>
+        <p class="sum-item">9 items</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- top cat end -->
+
+
+    <!-- js -->
     <script src="assets/js/script.js"></script>
+    <!-- swiper js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>
 </html>
