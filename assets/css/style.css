@@ -97,12 +97,12 @@ span {
   background-color: var(--white);
   position: absolute;
   top: 45px;
-  left: 0;
+  right: 0.5px;
   border-radius: 0 0 5px 5px;
   cursor: pointer;
   max-height: 250px;
   overflow-y: scroll;
-  width: 100%;
+  width: 135px;
   display: none;
   z-index: 1001;
 }
@@ -110,7 +110,8 @@ span {
 .lang-item {
   display: flex;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
+  width: 100%;
   gap: 0.5rem;
   z-index: 1001;
 }
@@ -695,7 +696,9 @@ span {
 }
 
 .btn-top-cat .btn-prev,
-.btn-top-cat .btn-next {
+.btn-top-cat .btn-next,
+.btn-prev-daily,
+.btn-next-daily {
   background-color: var(--btn-bg);
   border: none;
   padding: 5px;
@@ -704,4 +707,232 @@ span {
   align-items: center;
   font-weight: 500;
   cursor: pointer;
+}
+
+/* ads section */
+.ads-section {
+  padding-top: 30px;
+  padding-bottom: 13px;
+  position: relative;
+}
+
+.ads-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.ads-content {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 40vh;
+}
+
+.ads-text {
+  max-width: 20vw;
+  padding: 3rem 1.5rem;
+  color: var(--txt-second);
+  text-align: left;
+}
+
+.ads-text h4 {
+  position: relative;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.btn-shop {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 0.8rem;
+  border-radius: 5px;
+  font-weight: 400;
+}
+
+/* daily best section */
+.daily-best-section {
+  padding-top: 20px;
+  padding-bottom: 13px;
+}
+
+.daily-best-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.daily-best-header h3 {
+  color: var(--txt-second);
+}
+
+.daily-best-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.daily-ads {
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 10px;
+  width: 100%;
+  min-height: 55vh;
+}
+
+.daily-ads-text {
+  max-width: 20vw;
+  padding: 3rem 1.5rem;
+  color: var(--txt-second);
+  text-align: left;
+}
+
+.daily-ads-text h2 {
+  position: relative;
+  font-weight: 700;
+  padding-bottom: 70px;
+}
+
+.daily-best-product {
+  display: flex;
+  align-items: center;
+  position: right;
+}
+
+.daily-best-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: calc(100% - 5px);
+  overflow: hidden;
+}
+
+.daily-best-item {
+  width: 215px;
+  max-height: 60vh;
+  border: 1px solid #dadada;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+
+.daily-best-img {
+  width: auto;
+  height: 27vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.daily-best-text {
+  max-width: 3.5vw;
+  max-height: 3.5vh;
+  padding: 2px 8px 8px 8px;
+  color: var(--txt-second);
+  text-align: center;
+  background-color: #F74B81;
+  border-radius: 5px;
+}
+
+.daily-best-text p {
+  font-size: 12px;
+  color: var(--white);
+}
+
+.daily-best-desc {
+  padding: 0 1rem 1rem 1rem;
+  text-align: left;
+}
+
+.daily-best-cat {
+  font-size: 10px;
+  color: var(--txt-primary);
+  padding-bottom: 5px;
+}
+
+.daily-best-desc .title {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.rating {
+  font-size: 12px;
+  color: rgb(221, 221, 13);
+  padding-bottom: 3px;
+}
+
+.best-deals {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 3px;
+}
+
+.best-deals span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.best-deals p {
+  font-size: 12px;
+  text-decoration: line-through;
+}
+
+.best-sold {
+  font-size: 10px;
+  padding-bottom: 5px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+}
+
+.btn-cart {
+  padding: 8px 45px 8px 45px;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.line-container {
+  position: relative;
+  height: 3px; 
+}
+
+.line-sold-first {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: var(--txt-primary);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.line-sold-second {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 50%;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.btn-daily-best {
+  display: flex;
+  align-items: center;
 }

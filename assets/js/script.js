@@ -43,12 +43,12 @@ list.addEventListener('click', (e) => {
     }
 });
 
-let dropdownBtn = document.getElementById("drop-text");
-let catList = document.getElementById("cat-list");
-let span = document.getElementById("span");
-let icon = document.getElementById("icon");
-let input = document.getElementById("search-input");
-let listItems = document.querySelectorAll(".cat-list-item")
+const dropdownBtn = document.getElementById("drop-text");
+const catList = document.getElementById("cat-list");
+const span = document.getElementById("span");
+const icon = document.getElementById("icon");
+const input = document.getElementById("search-input");
+const listItems = document.querySelectorAll(".cat-list-item")
 
 dropdownBtn.onclick = function () {
     if (catList.classList.contains("show")) {
@@ -83,11 +83,11 @@ for (item of listItems) {
 }
 
 // dropdown for browse-list
-let dropdownBtnBrowse = document.getElementById("drop-text-browse");
-let spanBrowse = document.getElementById("span-browse");
-let iconBrowse = document.getElementById("icon-browse");
-let browseList = document.getElementById("browse-list");
-let browseListItems = document.querySelectorAll(".browse-list-item");
+const dropdownBtnBrowse = document.getElementById("drop-text-browse");
+const spanBrowse = document.getElementById("span-browse");
+const iconBrowse = document.getElementById("icon-browse");
+const browseList = document.getElementById("browse-list");
+const browseListItems = document.querySelectorAll(".browse-list-item");
 
 dropdownBtnBrowse.onclick = function () {
     if (browseList.classList.contains("show")) {
@@ -116,11 +116,11 @@ for (itemBrowse of browseListItems) {
 }
 
 // dropdown for shop-list
-let dropdownBtnShop = document.getElementById("drop-text-shop");
-let spanShop = document.getElementById("span-shop");
-let iconShop = document.getElementById("icon-shop");
-let shopList = document.getElementById("shop-list");
-let shopListItems = document.querySelectorAll(".shop-list-item");
+const dropdownBtnShop = document.getElementById("drop-text-shop");
+const spanShop = document.getElementById("span-shop");
+const iconShop = document.getElementById("icon-shop");
+const shopList = document.getElementById("shop-list");
+const shopListItems = document.querySelectorAll(".shop-list-item");
 
 dropdownBtnShop.onclick = function () {
     if (shopList.classList.contains("show")) {
@@ -149,11 +149,11 @@ for (itemShop of shopListItems) {
 }
 
 // dropdown for stores-list
-let dropdownBtnStores = document.getElementById("drop-text-stores");
-let spanStores = document.getElementById("span-stores");
-let iconStores = document.getElementById("icon-stores");
-let storesList = document.getElementById("stores-list");
-let storesListItems = document.querySelectorAll(".stores-list-item");
+const dropdownBtnStores = document.getElementById("drop-text-stores");
+const spanStores = document.getElementById("span-stores");
+const iconStores = document.getElementById("icon-stores");
+const storesList = document.getElementById("stores-list");
+const storesListItems = document.querySelectorAll(".stores-list-item");
 
 dropdownBtnStores.onclick = function () {
     if (storesList.classList.contains("show")) {
@@ -182,11 +182,11 @@ for (itemStores of storesListItems) {
 }
 
 // dropdown for prod-list
-let dropdownBtnProd = document.getElementById("drop-text-prod");
-let spanProd = document.getElementById("span-prod");
-let iconProd = document.getElementById("icon-prod");
-let prodList = document.getElementById("prod-list");
-let prodListItems = document.querySelectorAll(".prod-list-item");
+const dropdownBtnProd = document.getElementById("drop-text-prod");
+const spanProd = document.getElementById("span-prod");
+const iconProd = document.getElementById("icon-prod");
+const prodList = document.getElementById("prod-list");
+const prodListItems = document.querySelectorAll(".prod-list-item");
 
 dropdownBtnProd.onclick = function () {
     if (prodList.classList.contains("show")) {
@@ -215,11 +215,11 @@ for (itemprod of prodListItems) {
 }
 
 // dropdown for blog-list
-let dropdownBtnBlog = document.getElementById("drop-text-blog");
-let spanBlog = document.getElementById("span-blog");
-let iconBlog = document.getElementById("icon-blog");
-let blogList = document.getElementById("blog-list");
-let blogListItems = document.querySelectorAll(".blog-list-item");
+const dropdownBtnBlog = document.getElementById("drop-text-blog");
+const spanBlog = document.getElementById("span-blog");
+const iconBlog = document.getElementById("icon-blog");
+const blogList = document.getElementById("blog-list");
+const blogListItems = document.querySelectorAll(".blog-list-item");
 
 dropdownBtnBlog.onclick = function () {
     if (blogList.classList.contains("show")) {
@@ -304,4 +304,47 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize the slider
     updateSlider();
   });
+
+// daily-best
+// script.js
+
+document.addEventListener('DOMContentLoaded', function () {
+    const itemsToShow = 4; // Jumlah produk yang ditampilkan sekaligus
+    const itemContainer = document.querySelector('.daily-best-list');
+    const items = Array.from(itemContainer.querySelectorAll('.daily-best-item'));
+    
+    // Mengatur tampilan awal
+    let currentIndex = 0;
+    updateDisplay();
+  
+    // Fungsi untuk memperbarui tampilan produk
+    function updateDisplay() {
+      items.forEach((item, index) => {
+        item.style.display = (index >= currentIndex && index < currentIndex + itemsToShow) ? 'block' : 'none';
+      });
+  
+      // Disable/enable navigation buttons based on current index
+      document.querySelector('.btn-prev-daily').disabled = currentIndex === 0;
+      document.querySelector('.btn-next-daily').disabled = currentIndex + itemsToShow >= items.length;
+    }
+  
+    // Menangani klik tombol sebelumnya
+    document.querySelector('.btn-prev-daily').addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex = Math.max(0, currentIndex - itemsToShow);
+        updateDisplay();
+      }
+    });
+  
+    // Menangani klik tombol berikutnya
+    document.querySelector('.btn-next-daily').addEventListener('click', () => {
+      if (currentIndex + itemsToShow < items.length) {
+        currentIndex = Math.min(items.length - itemsToShow, currentIndex + itemsToShow);
+        updateDisplay();
+      }
+    });
+  });
+  
+
+  
   
